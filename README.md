@@ -14,11 +14,11 @@ Base de donnée
 Table Recette avec les colonnes: nom, ingredients, methode
 
 Application Sur http://localhost:3000
-Barre de recherche : 
+(Barre de recherche) : 
  - insensible a la casse
  - si on recherche le vide tout la liste s'affiche 
  - si on recherche un nom inexistant, aucune recette ne s'affiche
-Une liste de recette :
+(Une liste de recette) :
  - si on clique sur une recette, les détails de la recette s'affiche
  - on peut modifier ou supprimer une rectte
  - on peut créer une nouvelle recette
