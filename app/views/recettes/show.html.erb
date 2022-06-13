@@ -1,0 +1,7 @@
+<h1>Information Recette</h1>
+<h2><%= @recette.nom %></h2>
+<p><b>Ingrédients:</b> <%= @recette.ingredients %></p>
+<p><b>Méthode:</b> <%= @recette.methode %></p>
+<%= button_to 'Supprimer', recette_path(@recette), method: 'delete', data: { confirm: 'Vous êtes sure ?' } %>
+<%= button_to 'Modifier', edit_recette_path(@recette), method: 'get'%>
+<p><%= button_to 'Retour aux autres recettes', recettes_path, method: 'get'%></p>

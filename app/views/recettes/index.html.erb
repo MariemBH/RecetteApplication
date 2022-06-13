@@ -1,0 +1,18 @@
+<h1>Recettes</h1>
+<%= link_to "Ajouter une nouvelle recette", new_recette_path %>
+<p></p>
+
+<h4>Recherche par nom de recette: </h4>
+   <%= form_tag(recettes_path, method: 'get') do %>
+     <%= text_field_tag(:search, params[:search]) %>
+     <%= submit_tag ("Rechercher") %>
+   <% end %>
+<p></p>
+<table>
+  <% @recettes.each do |recette| %>
+    <tr>
+      <td><%= link_to recette.nom, recette_path(recette) %></td>
+      <td><%= button_to 'Modifier', edit_recette_path(recette), method: 'get'%></td>
+      <td><%= button_to 'Supprimer', recette_path(recette), method: 'delete', data: { confirm: 'Vous êtes sure ?' } %></td>
+  <% end %>
+</table>

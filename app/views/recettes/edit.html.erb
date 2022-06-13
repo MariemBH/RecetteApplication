@@ -1,0 +1,7 @@
+<h3>Modifier la recette</h3>
+<%= form_with model: @recette do |form| %>
+  <%= form.text_field :nom, placeholder: "nom" %>
+  <%= form.text_field :ingredients, placeholder: "ingrédients" %>
+  <%= form.text_field :methode, placeholder: "méthode" %>
+  <%= form.submit %>
+<% end %>
